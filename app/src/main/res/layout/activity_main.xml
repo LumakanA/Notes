@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:background="@color/grey">
 
     <ImageView
         android:id="@+id/imageView"
@@ -70,8 +71,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_400"
         android:hint="Enter your email"
-        android:lineHeight="21dp"
-        android:minWidth="290dp"
+        android:background="@android:color/transparent"
+        android:lineHeight="15dp"
+        android:minWidth="280dp"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
@@ -100,8 +102,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_400"
         android:hint="Confirm password"
-        android:lineHeight="21dp"
-        android:minWidth="290dp"
+        android:background="@android:color/transparent"
+        android:lineHeight="15dp"
+        android:minWidth="280dp"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
