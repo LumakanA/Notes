@@ -14,9 +14,6 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/circles"
         android:src="@drawable/circles"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="240dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +44,6 @@
         android:layout_marginBottom="385dp"
         android:contentDescription="@string/microchel"
         android:src="@drawable/login_microchel"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -62,12 +58,9 @@
         android:layout_marginBottom="289dp"
         android:contentDescription="@string/email"
         android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
     <EditText
         android:id="@+id/editText"
@@ -84,7 +77,6 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 
     <ImageView
@@ -97,11 +89,9 @@
         android:layout_marginBottom="214dp"
         android:contentDescription="@string/password"
         android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
 
     <EditText
         android:id="@+id/editText1"
@@ -118,10 +108,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        tools:ignore="MissingConstraints"
-        tools:targetApi="p"
-        android:inputType="textVisiblePassword"
-        android:autofillHints="p" />
+        tools:targetApi="p"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -154,7 +141,6 @@
         android:textColor="@color/black"
         android:textSize="22sp"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -173,7 +159,6 @@
         android:text="@string/don_t_have_an_account"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
@@ -191,7 +176,6 @@
         android:text="@string/signup"
         android:textColor="@color/yellow"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
