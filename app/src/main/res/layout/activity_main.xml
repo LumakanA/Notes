@@ -122,10 +122,10 @@
         tools:ignore="MissingConstraints"
         tools:targetApi="p"
         android:inputType="textVisiblePassword"
-        android:autofillHints="password" />
+        android:autofillHints="p" />
 
     <TextView
-        android:id="@+id/button"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
@@ -143,7 +143,7 @@
         tools:targetApi="p" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button2"
+        android:id="@+id/button"
         android:layout_width="309dp"
         android:layout_height="70dp"
         android:layout_marginLeft="33dp"
@@ -161,12 +161,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0"
         tools:targetApi="p" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -181,7 +181,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:targetApi="p" />
 
     <TextView
@@ -199,7 +199,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:targetApi="p" />
 
 
