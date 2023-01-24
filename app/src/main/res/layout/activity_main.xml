@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,10 +36,10 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:layout_marginBottom="385dp"
         android:layout_marginLeft="88dp"
+        android:layout_marginTop="47dp"
         android:layout_marginRight="92dp"
+        android:layout_marginBottom="385dp"
         android:contentDescription="microchel"
         android:src="@drawable/login_microchel"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
         android:layout_width="309dp"
         android:layout_height="70dp"
@@ -137,21 +138,49 @@
         android:fontFamily="@font/poppins_700"
         android:lineHeight="33dp"
         android:text="Sign In"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="22dp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins_400"
+        android:lineHeight="21dp"
         android:text="Don't have an account?"
-
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_700"
+        android:textColor="@color/yellow"
+        android:lineHeight="21dp"
+        android:text="SignUp"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
