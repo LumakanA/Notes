@@ -14,7 +14,11 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/circles"
         android:src="@drawable/circles"
-        tools:ignore="MissingConstraints,ImageContrastCheck" />
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -23,13 +27,11 @@
         android:layout_marginStart="97dp"
         android:layout_marginTop="95dp"
         android:layout_marginEnd="137dp"
-        android:layout_marginBottom="549dp"
         android:fontFamily="@font/poppins_500"
         android:lineHeight="27sp"
         android:text="@string/welcome_back"
         android:textSize="27sp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -48,8 +50,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -78,16 +79,13 @@
         android:textColor="@color/black"
         android:lineHeight="15dp"
         android:minWidth="280dp"
-        android:minHeight="48dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         tools:ignore="MissingConstraints"
-        tools:targetApi="p"
-        android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress" />
+        tools:targetApi="p" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -115,7 +113,6 @@
         android:textColor="@color/black"
         android:lineHeight="15dp"
         android:minWidth="280dp"
-        android:minHeight="48dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
@@ -133,16 +130,13 @@
         android:layout_marginStart="53dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="62dp"
-        android:layout_marginBottom="167dp"
         android:backgroundTint="@color/white"
         android:outlineSpotShadowColor="@color/white"
         android:text="@string/forgot_password"
         android:textColor="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:ignore="TextContrastCheck"
         tools:targetApi="p" />
 
     <com.google.android.material.button.MaterialButton
@@ -201,7 +195,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="TextContrastCheck"
         tools:targetApi="p" />
 
 
