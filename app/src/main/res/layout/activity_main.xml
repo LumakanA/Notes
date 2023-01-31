@@ -54,6 +54,7 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:boxCornerRadiusBottomEnd="30dp"
@@ -66,12 +67,13 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView1" >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEmail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:paddingStart="35dp"
             android:fontFamily="@font/poppins_400"
             android:hint="@string/enter_your_email"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -96,6 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputPassword"
+            android:paddingStart="35dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppins_400"
