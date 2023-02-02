@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="ExtraText"
     android:background="@color/grey">
 
     <ImageView
@@ -23,30 +21,32 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="97dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="137dp"
+        android:layout_marginEnd="100dp"
         android:fontFamily="@font/poppins_500"
-        android:text="@string/welcome_back"
+        android:text="@string/welcome_onboard"
         android:textSize="18sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="92dp"
-        android:contentDescription="@string/microchel"
-        android:src="@drawable/login_microchel"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="59dp"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/we_help_you_meet"
+        android:textSize="12sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutEmail"
+        android:id="@+id/textInputLayoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="@color/white"
@@ -63,7 +63,39 @@
         android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" >
+        app:layout_constraintTop_toBottomOf="@+id/textView1" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_400"
+            android:hint="@string/enter_your_full_name"
+            android:paddingStart="35dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/white"
+        android:textColorHint="@color/black"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName" >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEmail"
             android:layout_width="match_parent"
@@ -75,9 +107,8 @@
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@id/textInputLayoutPassword"
+        android:id="@id/textInputLayoutEnterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="@color/white"
@@ -96,7 +127,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputPassword"
+            android:id="@+id/textInputEnterPassword"
+            android:paddingStart="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_400"
+            android:hint="@string/enter_password"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/textInputLayoutConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/white"
+        android:textColorHint="@color/black"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEnterPassword">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputConfirmPassword"
             android:paddingStart="35dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -105,21 +166,6 @@
             android:textColor="@color/black"
             android:textSize="14sp"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="62dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/forgot_password"
-        android:textColor="@color/yellow"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/register"
@@ -130,24 +176,24 @@
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellow"
         android:fontFamily="@font/poppins_700"
-        android:text="@string/sign_in"
+        android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="22sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutConfirmPassword"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="90dp"
         android:fontFamily="@font/poppins_400"
-        android:text="@string/don_t_have_an_account"
+        android:text="@string/already_have_an_account"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,17 +201,16 @@
         app:layout_constraintTop_toBottomOf="@+id/register"/>
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="59dp"
-        android:fontFamily="@font/poppins_700"
-        android:text="@string/signup"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/poppins_800"
+        android:text="@string/sign_in"
         android:textColor="@color/yellow"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
