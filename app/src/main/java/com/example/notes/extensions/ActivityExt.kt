@@ -12,25 +12,33 @@ fun Activity.validateName(text: Editable?):String?{
     }
 }
 fun Activity.validateEmail(text: Editable?):String? {
-    return if (text.toString().length >= 7 && text.toString().contains("@")) {
+    return if (text.toString().isNotEmpty() && text.toString().length >= 7 && text.toString().contains("@")) {
         null
     } else {
-        "Mail must contain at least 7 characters and \"@\""
+        if (text.toString().isEmpty())
+            "The field should not be empty" else
+            "Mail must contain at least 7 characters and \"@\""
+
     }
 }
-fun Activity.validateEnterPassword(text: Editable?):String? {
-    return if (text.toString().length >= 8)  {
+fun Activity.validateEnterPassword(text: Editable?): String? {
+    return if (text.toString().isNotEmpty() && text.toString().length >= 8) {
         null
     } else {
-        "Password must not be shorter than 8 characters"
+        if (text.toString().isEmpty())
+            "The field should not be empty" else
+            "Password must not be shorter than 8 characters"
     }
 }
 fun Activity.validateConfirmPassword(password: TextInputEditText, confirmedPassword: TextInputEditText):String? {
     val passwordValue = password.text.toString()
     val confirmedPasswordValue = confirmedPassword.text.toString()
-    return if (passwordValue != confirmedPasswordValue) {
+    return if (passwordValue.isEmpty() || confirmedPasswordValue.isEmpty()) {
+        "The fields should not be empty"
+    } else if (passwordValue != confirmedPasswordValue) {
         "Passwords do not match"
     } else {
         null
     }
 }
+
