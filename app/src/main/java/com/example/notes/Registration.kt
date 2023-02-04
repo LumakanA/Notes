@@ -3,6 +3,7 @@ package com.example.notes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.notes.databinding.ActivityRegistrationBinding
 import com.example.notes.extensions.validateConfirmPassword
 import com.example.notes.extensions.validateEmail
@@ -19,17 +20,23 @@ class Registration : AppCompatActivity() {
         val email = binding.textInputEmail.text
         val enterpassword = binding.textInputEnterPassword.text
         val confirmpassword = binding.textInputConfirmPassword.text
-        binding.textInputName.setOnClickListener {
-            binding.textInputLayoutName.error = validateName(name)
-        }
-        binding.textInputEmail.setOnClickListener {
-            binding.textInputLayoutEmail.error = validateEmail(email)
-        }
-        binding.textInputEnterPassword.setOnClickListener {
-            binding.textInputLayoutEnterPassword.error = validateEnterPassword(enterpassword)
-        }
-        binding.textInputConfirmPassword.setOnClickListener {
-            binding.textInputLayoutConfirmPassword.error = validateConfirmPassword(binding.textInputEnterPassword, binding.textInputConfirmPassword)
+        binding.buttonRegister.setOnClickListener {
+            if (validateName(name) == null
+                && validateEmail(email) == null
+                && validateEnterPassword(enterpassword) == null
+                && validateConfirmPassword(binding.textInputEnterPassword, binding.textInputConfirmPassword) == null
+            ) {
+                binding.textInputLayoutName.error = null
+                binding.textInputLayoutEmail.error = null
+                binding.textInputLayoutEnterPassword.error = null
+                binding.textInputLayoutConfirmPassword.error = null
+                Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+            } else {
+                binding.textInputLayoutName.error = validateName(name)
+                binding.textInputLayoutEmail.error = validateEmail(email)
+                binding.textInputLayoutEnterPassword.error = validateEnterPassword(enterpassword)
+                binding.textInputLayoutConfirmPassword.error = validateConfirmPassword(binding.textInputEnterPassword, binding.textInputConfirmPassword)
+            }
         }
         binding.textView3.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
