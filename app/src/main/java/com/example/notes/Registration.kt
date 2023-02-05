@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.notes.databinding.ActivityLoginBinding
 import com.example.notes.databinding.ActivityRegistrationBinding
 import com.example.notes.extensions.validateConfirmPassword
 import com.example.notes.extensions.validateEmail
@@ -19,23 +20,30 @@ class Registration : AppCompatActivity() {
         val name = binding.textInputName.text
         val email = binding.textInputEmail.text
         val enterpassword = binding.textInputEnterPassword.text
-        val confirmpassword = binding.textInputConfirmPassword.text
+        fun setError(
+            nameError: String?,
+            emailError: String?,
+            enterPasswordError: String?,
+            confirmPasswordError: String?
+        ) {
+            binding.textInputLayoutName.error = nameError
+            binding.textInputLayoutEmail.error = emailError
+            binding.textInputLayoutEnterPassword.error = enterPasswordError
+            binding.textInputLayoutConfirmPassword.error = confirmPasswordError
+        }
         binding.buttonRegister.setOnClickListener {
-            if (validateName(name) == null
-                && validateEmail(email) == null
-                && validateEnterPassword(enterpassword) == null
-                && validateConfirmPassword(binding.textInputEnterPassword, binding.textInputConfirmPassword) == null
-            ) {
-                binding.textInputLayoutName.error = null
-                binding.textInputLayoutEmail.error = null
-                binding.textInputLayoutEnterPassword.error = null
-                binding.textInputLayoutConfirmPassword.error = null
+            val nameError = validateName(name)
+            val emailError = validateEmail(email)
+            val enterPasswordError = validateEnterPassword(enterpassword)
+            val confirmPasswordError = validateConfirmPassword(
+                binding.textInputEnterPassword,
+                binding.textInputConfirmPassword
+            )
+            if (nameError == null && emailError == null && enterPasswordError == null && confirmPasswordError == null) {
+                setError(null, null, null, null)
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
             } else {
-                binding.textInputLayoutName.error = validateName(name)
-                binding.textInputLayoutEmail.error = validateEmail(email)
-                binding.textInputLayoutEnterPassword.error = validateEnterPassword(enterpassword)
-                binding.textInputLayoutConfirmPassword.error = validateConfirmPassword(binding.textInputEnterPassword, binding.textInputConfirmPassword)
+                setError(nameError, emailError, enterPasswordError, confirmPasswordError)
             }
         }
         binding.textView3.setOnClickListener {
