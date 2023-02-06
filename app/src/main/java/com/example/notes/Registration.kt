@@ -20,7 +20,6 @@ class Registration : AppCompatActivity() {
             val name = binding.textInputName.text
             val email = binding.textInputEmail.text
             val enterPassword = binding.textInputEnterPassword.text
-
             val nameError = validateName(name)
             val emailError = validateEmail(email)
             val enterPasswordError = validateEnterPassword(enterPassword)
@@ -28,7 +27,6 @@ class Registration : AppCompatActivity() {
                 binding.textInputEnterPassword,
                 binding.textInputConfirmPassword
             )
-
             if (nameError == null && emailError == null && enterPasswordError == null && confirmPasswordError == null) {
                 binding.textInputLayoutName.error = null
                 binding.textInputLayoutEmail.error = null

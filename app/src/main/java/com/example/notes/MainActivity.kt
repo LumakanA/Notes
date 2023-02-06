@@ -16,10 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding.buttonSingin.setOnClickListener {
             val email = binding.textInputEmail.text
             val password = binding.textInputPassword.text
-
             val emailError = validateEmail(email)
             val passwordError = validateEnterPassword(password)
-
             if (emailError == null && passwordError == null) {
                 binding.textInputLayoutEmail.error = null
                 binding.textInputLayoutPassword.error = null
