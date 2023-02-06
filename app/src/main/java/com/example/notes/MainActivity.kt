@@ -13,24 +13,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val email = binding.textInputEmail.text
-        val enterpassword = binding.textInputPassword.text
-        fun setError(
-            emailError: String?,
-            passwordError: String?
-        ) {
-            binding.textInputLayoutEmail.error = emailError
-            binding.textInputLayoutPassword.error = passwordError
-        }
         binding.buttonSingin.setOnClickListener {
+            val email = binding.textInputEmail.text
+            val password = binding.textInputPassword.text
+
             val emailError = validateEmail(email)
-            val passwordError = validateEnterPassword(enterpassword)
+            val passwordError = validateEnterPassword(password)
 
             if (emailError == null && passwordError == null) {
-                setError(null, null)
+                binding.textInputLayoutEmail.error = null
+                binding.textInputLayoutPassword.error = null
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
             } else {
-                setError(emailError, passwordError)
+                binding.textInputLayoutEmail.error = emailError
+                binding.textInputLayoutPassword.error = passwordError
             }
         }
         binding.textView4.setOnClickListener {
