@@ -14,17 +14,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonSingin.setOnClickListener {
-            val email = binding.textInputEmail.text
-            val password = binding.textInputPassword.text
-            val emailError = validateEmail(email)
-            val passwordError = validateEnterPassword(password)
+            val emailError = validateEmail(binding.textInputEmail.text)
+            val passwordError = validateEnterPassword(binding.textInputPassword.text)
+            binding.textInputLayoutEmail.error = emailError
+            binding.textInputLayoutPassword.error = passwordError
             if (emailError == null && passwordError == null) {
-                binding.textInputLayoutEmail.error = null
-                binding.textInputLayoutPassword.error = null
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
-            } else {
-                binding.textInputLayoutEmail.error = emailError
-                binding.textInputLayoutPassword.error = passwordError
             }
         }
         binding.textView4.setOnClickListener {
