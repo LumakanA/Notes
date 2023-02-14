@@ -19,4 +19,5 @@
     <string name="already_have_an_account">Already have an account?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="tasks_list">Tasks List</string>
+    <string name="welcome_name">Welcome </string>
 </resources>
