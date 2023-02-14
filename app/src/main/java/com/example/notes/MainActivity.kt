@@ -1,30 +1,38 @@
 package com.example.notes
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.example.notes.databinding.ActivityLoginBinding
-import com.example.notes.extensions.*
+import com.example.notes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.buttonSingin.setOnClickListener {
-            val emailError = validateEmail(binding.textInputEmail.text)
-            val passwordError = validateEnterPassword(binding.textInputPassword.text)
-            binding.textInputLayoutEmail.error = emailError
-            binding.textInputLayoutPassword.error = passwordError
-            if (emailError == null && passwordError == null) {
-                Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+        setContentView(R.layout.activity_main)
+        binding.buttonNavigationViewMenu.setOnItemReselectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.tasks -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, TasksFragment())
+                    true
+                }
+                R.id.profile -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, ProfileFragment())
+                    true
+                }
+                R.id.history -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, HistoryFragment())
+                    true
+                }
+                else -> {
+                    true
+                }
             }
-        }
-        binding.textView4.setOnClickListener {
-            val intent = Intent(this, Registration::class.java)
-            startActivity(intent)
         }
     }
 }

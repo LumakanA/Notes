@@ -10,7 +10,7 @@ import com.example.notes.extensions.validateEmail
 import com.example.notes.extensions.validateEnterPassword
 import com.example.notes.extensions.validateName
 
-class Registration : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegistrationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class Registration : AppCompatActivity() {
             }
         }
         binding.textView3.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LogInActivity::class.java)
             startActivity(intent)
         }
     }
