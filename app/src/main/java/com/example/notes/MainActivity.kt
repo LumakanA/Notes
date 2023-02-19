@@ -10,24 +10,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.buttonNavigationViewMenu.setOnItemReselectedListener { menuItem ->
+        binding.buttonNavigationViewMenu.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.tasks -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragmentContainer, TasksFragment())
-                    true
-                }
                 R.id.profile -> {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.fragmentContainer, ProfileFragment())
+                        .commit()
+                    true
+                }
+                R.id.tasks -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, TasksFragment())
+                        .commit()
                     true
                 }
                 R.id.history -> {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.fragmentContainer, HistoryFragment())
+                        .commit()
                     true
                 }
                 else -> {
@@ -35,5 +38,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        binding.buttonNavigationViewMenu.selectedItemId = R.id.tasks
     }
 }

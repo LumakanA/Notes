@@ -1,8 +1,10 @@
 package com.example.notes
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.preference.PreferenceManager
 import android.widget.Toast
 import com.example.notes.databinding.ActivityRegistrationBinding
 import com.example.notes.extensions.validateConfirmPassword
@@ -30,6 +32,15 @@ class RegistrationActivity : AppCompatActivity() {
             binding.textInputLayoutConfirmPassword.error = confirmPasswordError
             if (nameError == null && emailError == null && enterPasswordError == null && confirmPasswordError == null) {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+
+                val name = binding.textInputName.text.toString()
+                val sharedPreferences = getSharedPreferences("Registration", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("username", name)
+                editor.apply()
+
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
             }
         }
         binding.textView3.setOnClickListener {

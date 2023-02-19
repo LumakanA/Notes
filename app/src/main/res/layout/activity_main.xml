@@ -22,11 +22,13 @@
         android:id="@+id/buttonNavigationViewMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bottom_nav_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bot_nav_menu"
-        app:itemRippleColor="@color/yellow" />
+        app:itemIconSize="45dp"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

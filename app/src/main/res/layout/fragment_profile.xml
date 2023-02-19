@@ -2,26 +2,44 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="250dp"
     tools:context=".ProfileFragment"
     android:background="@color/yellow">
 
-    <!-- TODO: Update blank fragment layout -->
     <ImageView
+        android:id="@+id/imageViewCircles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circles_transparent"/>
+        android:src="@drawable/circles_transparent" />
 
     <ImageView
+        android:id="@+id/imageViewExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="175dp"
+        android:src="@drawable/baseline_logout_24" />
+
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ellipse"
+        android:layout_marginStart="148dp"
         android:layout_marginTop="87dp"
-        android:paddingStart="138dp"
-        android:layout_marginEnd="137dp"/>
+        android:layout_marginEnd="137dp"
+        android:src="@drawable/ellipse" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/TextViewWelcome_textview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:fontFamily="@font/poppins_500"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="205dp"
+        android:gravity="center"/>
+
 </FrameLayout>

@@ -20,8 +20,8 @@ class LogInActivity : AppCompatActivity() {
             binding.textInputLayoutPassword.error = passwordError
             if (emailError == null && passwordError == null) {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
             }
         }
         binding.textView4.setOnClickListener {
