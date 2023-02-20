@@ -1,7 +1,7 @@
 package com.example.notes
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.notes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +38,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        binding.buttonNavigationViewMenu.selectedItemId = R.id.tasks
+        binding.buttonNavigationViewMenu.selectedItemId = R.id.profile
     }
 }

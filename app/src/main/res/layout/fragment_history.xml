@@ -31,5 +31,4 @@
         android:textSize="32sp"
         android:textColor="@color/transparentBlack"/>
 
-
 </FrameLayout>

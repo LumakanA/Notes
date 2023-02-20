@@ -22,17 +22,26 @@ class ProfileFragment : Fragment() {
             val intent = Intent(requireContext(), LogInActivity::class.java)
             startActivity(intent)
         }
-            return binding.root
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val sharedPreferences1 =
+            requireActivity().getSharedPreferences("Registration", Context.MODE_PRIVATE)
+        val sharedPreferences2 =
+            requireActivity().getSharedPreferences("LogIn", Context.MODE_PRIVATE)
+
+        val source = requireActivity().intent.getStringExtra("source")
+        if (source == "registration") {
+            val name = sharedPreferences1.getString("name", "")
+            val welcomeMessage = getString(R.string.welcome_name, name)
+            view.findViewById<TextView>(R.id.textViewWelcome_textView).text = welcomeMessage
+        } else if (source == "login") {
+            val email = sharedPreferences2.getString("email", "")
+            val welcomeMessage = getString(R.string.welcome_email, email)
+            view.findViewById<TextView>(R.id.textViewWelcome_textView).text = welcomeMessage
         }
-
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-
-            val sharedPreferences =
-                requireActivity().getSharedPreferences("Registration", Context.MODE_PRIVATE)
-            val username = sharedPreferences.getString("username", "")
-
-            val welcomeMessage = getString(R.string.welcome_name, username)
-            view.findViewById<TextView>(R.id.TextViewWelcome_textview).text = welcomeMessage
-        }
+    }
 }

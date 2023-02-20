@@ -1,11 +1,11 @@
 package com.example.notes
 
+
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.preference.PreferenceManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.notes.databinding.ActivityRegistrationBinding
 import com.example.notes.extensions.validateConfirmPassword
 import com.example.notes.extensions.validateEmail
@@ -34,12 +34,13 @@ class RegistrationActivity : AppCompatActivity() {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
 
                 val name = binding.textInputName.text.toString()
-                val sharedPreferences = getSharedPreferences("Registration", Context.MODE_PRIVATE)
-                val editor = sharedPreferences.edit()
-                editor.putString("username", name)
+                val sharedPreferences1 = getSharedPreferences("Registration", Context.MODE_PRIVATE)
+                val editor = sharedPreferences1.edit()
+                editor.putString("name", name)
                 editor.apply()
 
                 val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("source", "registration")
                 startActivity(intent)
             }
         }

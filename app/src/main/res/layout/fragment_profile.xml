@@ -33,7 +33,7 @@
         android:src="@drawable/ellipse" />
 
     <TextView
-        android:id="@+id/TextViewWelcome_textview"
+        android:id="@+id/textViewWelcome_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_500"

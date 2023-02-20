@@ -19,5 +19,6 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="tasks_list">Tasks List</string>
     <string name="welcome_name">Welcome %s!</string>
+    <string name="welcome_email">Welcome %s!</string>
     <string name="no_history">No History</string>
 </resources>
