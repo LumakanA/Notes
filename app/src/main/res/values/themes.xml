@@ -2,7 +2,6 @@
     <!-- Base application theme. -->
     <style name="Theme.Notes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="cornerRadius">8dp</item>
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/invisible</item>
         <item name="colorOnPrimary">@color/yellow</item>
