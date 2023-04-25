@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    tools:context=".ProfileFragment"
+    tools:context=".fragments.ProfileFragment"
     android:background="@color/yellow">
 
     <ImageView
         android:id="@+id/imageViewCircles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circles_transparent" />
+        android:src="@drawable/circles_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewExit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="333dp"
         android:layout_marginTop="51dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="175dp"
-        android:src="@drawable/baseline_logout_24" />
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/imageViewIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="87dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="137dp"
-        android:src="@drawable/ellipse" />
+        android:src="@drawable/ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewExit" />
 
     <TextView
         android:id="@+id/textViewWelcome_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:fontFamily="@font/poppins_500"
-        android:textSize="18sp"
         android:textColor="@color/black"
-        android:layout_marginTop="205dp"
-        android:gravity="center"/>
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIcon" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

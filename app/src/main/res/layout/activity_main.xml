@@ -4,31 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/grey">
+    android:background="@color/grey"
+    tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
-        android:name="com.example.notes.TasksFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
         app:layout_constraintBottom_toTopOf="@+id/buttonNavigationViewMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_tasks" />
+        app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationViewMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_nav_bg"
+        android:visibility="gone"
+        app:itemIconSize="45dp"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bot_nav_menu"
-        app:itemIconSize="45dp"
-        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"/>
+        app:menu="@menu/bot_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
