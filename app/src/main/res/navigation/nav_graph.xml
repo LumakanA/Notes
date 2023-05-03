@@ -26,8 +26,8 @@
             android:id="@+id/action_logInFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
         <action
-            android:id="@+id/action_logInFragment_to_main_nav_graph"
-            app:destination="@id/main_nav_graph" />
+            android:id="@+id/action_logInFragment_to_profile_nav_graph"
+            app:destination="@id/profile_nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -37,9 +37,8 @@
         <action
             android:id="@+id/action_registrationFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
-        <action
-            android:id="@+id/action_registrationFragment_to_main_nav_graph"
-            app:destination="@id/main_nav_graph" />
     </fragment>
-    <include app:graph="@navigation/main_nav_graph" />
+    <include app:graph="@navigation/history_nav_graph" />
+    <include app:graph="@navigation/profile_nav_graph" />
+    <include app:graph="@navigation/task_nav_graph" />
 </navigation>

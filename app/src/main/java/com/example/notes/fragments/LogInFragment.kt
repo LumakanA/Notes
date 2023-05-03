@@ -35,17 +35,17 @@ class LogInFragment : Fragment() {
             binding.textInputLayoutPassword.error = passwordError
             if (emailError == null && passwordError == null) {
                 Toast.makeText(requireContext(), "Success!", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_logInFragment_to_main_nav_graph)
+                findNavController().navigate(R.id.action_logInFragment_to_profile_nav_graph)
                 Log.d("nav", "логин - майн граф")
                 val email = binding.textInputEmail.text.toString()
                 preferences = requireContext().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
                 preferences.edit()
                     .putString(PREF_EMAIL, email)
                     .apply()
-
-                val intent = Intent(requireContext(), MainActivity::class.java)
-                intent.putExtra("source", "login")
-                startActivity(intent)
+//
+//                val intent = Intent(requireContext(), MainActivity::class.java)
+//                intent.putExtra("source", "login")
+//                startActivity(intent)
             }
         }
         binding.textView4.setOnClickListener {

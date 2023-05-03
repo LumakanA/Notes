@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationViewManager {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val navController =
-            (supportFragmentManager.findFragmentById(R.id.fragmentContainer) as NavHostFragment).navController
+            (supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment).navController
         binding.buttonNavigationViewMenu.setupWithNavController(navController)
     }
 

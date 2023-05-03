@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainer"
+        android:id="@+id/navHostFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:background="@color/grey"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@+id/buttonNavigationViewMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_nav_bg"
-        android:visibility="gone"
         app:itemIconSize="45dp"
         app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
         app:labelVisibilityMode="unlabeled"
