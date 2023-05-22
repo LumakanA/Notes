@@ -6,6 +6,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.notes.databinding.ActivityMainBinding
+
 class MainActivity : AppCompatActivity(), BottomNavigationViewManager {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {

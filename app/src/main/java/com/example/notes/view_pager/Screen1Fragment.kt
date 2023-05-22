@@ -2,12 +2,11 @@ package com.example.notes.view_pager
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.notes.BottomNavigationViewManager
-import com.example.notes.R
 import com.example.notes.databinding.FragmentScreen1Binding
 
 class Screen1Fragment : Fragment() {

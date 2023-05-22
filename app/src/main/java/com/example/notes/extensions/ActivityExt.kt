@@ -13,7 +13,7 @@ fun Fragment.validateName(text: Editable?):String?{
     }
 }
 fun Fragment.validateEmail(text: Editable?):String? {
-    return if (text.toString().isNotEmpty() && text.toString().length >= 7 && text.toString().contains("@") || text.toString().contains("a")) {
+    return if (text.toString().isNotEmpty() && text.toString().length >= 7 && text.toString().contains("@")) {
         null
     } else {
         if (text.toString().isEmpty())
@@ -23,7 +23,7 @@ fun Fragment.validateEmail(text: Editable?):String? {
     }
 }
 fun Fragment.validateEnterPassword(text: Editable?): String? {
-    return if (text.toString().isNotEmpty() && text.toString().length >= 8 || text.toString().contains("a")) {
+    return if (text.toString().isNotEmpty() && text.toString().length >= 8) {
         null
     } else {
         if (text.toString().isEmpty())
