@@ -2,16 +2,17 @@ package com.example.notes.extensions
 
 import android.app.Activity
 import android.text.Editable
+import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 
-fun Activity.validateName(text: Editable?):String?{
+fun Fragment.validateName(text: Editable?):String?{
     return if(text.toString().isNotEmpty())
         null
     else {
         "The fields should not be empty"
     }
 }
-fun Activity.validateEmail(text: Editable?):String? {
+fun Fragment.validateEmail(text: Editable?):String? {
     return if (text.toString().isNotEmpty() && text.toString().length >= 7 && text.toString().contains("@")) {
         null
     } else {
@@ -21,7 +22,7 @@ fun Activity.validateEmail(text: Editable?):String? {
 
     }
 }
-fun Activity.validateEnterPassword(text: Editable?): String? {
+fun Fragment.validateEnterPassword(text: Editable?): String? {
     return if (text.toString().isNotEmpty() && text.toString().length >= 8) {
         null
     } else {
@@ -30,7 +31,7 @@ fun Activity.validateEnterPassword(text: Editable?): String? {
             "Password must not be shorter than 8 characters"
     }
 }
-fun Activity.validateConfirmPassword(password: TextInputEditText, confirmedPassword: TextInputEditText):String? {
+fun Fragment.validateConfirmPassword(password: TextInputEditText, confirmedPassword: TextInputEditText):String? {
     val passwordValue = password.text.toString()
     val confirmedPasswordValue = confirmedPassword.text.toString()
     return if (passwordValue.isEmpty() || confirmedPasswordValue.isEmpty()) {

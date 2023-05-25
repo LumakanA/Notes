@@ -21,4 +21,6 @@
     <string name="welcome_name">Welcome %s!</string>
     <string name="welcome_email">Welcome %s!</string>
     <string name="no_history">No History</string>
+    <string name="let_s_get_things_done_on_time">Let’s get things done on time</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Tellus praesent purus\ntincidunt ut cursus vitae. Nisl, vitae nulla\nlectus tortor, est a aliquam. Pretium netus</string>
 </resources>
